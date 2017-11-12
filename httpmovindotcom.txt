@@ -1,0 +1,59 @@
+IDEA : Create an app where people can add reviews about private houses based upon their true experineces. 
+
+Tools :  
+	UI :  CSS3 (SASS,LESS), Angular 4.0, Typescript, Bootstrap
+	WebApi : Express, Node
+	DB: Mongo
+
+
+Story 1 : Create a Login/Registration : 
+			A login can be created if 
+				User has valid email/phone
+				Password with standard complexity
+				Unique Screen Name
+			User should provide authentic proof (utility bills etc) (Future Item)
+
+		Architeture : 
+			1) Create User Table with EMailId, password(encrypted), ScreenName, validUser(T/F)-(if user uploaded proof of residency) 
+			2) Create a webAPi ->Expose CreateUser(user) method which will return T/F.
+			3) UI : Create a new project named "movin" through ng cli --> Create modules : Authentication(authenticateUser through oAuth, token), user 				(createUser, login).
+ 				  
+Story 2 : Add reviews
+		A user can add a review about a property if :
+			Check : User living/lived in the property. Autheticate through Utility Bills. (Future Item)
+			Select from a predefined Verbiages in drop down.
+			House Condition : Buttons with verbiage : "Property is in bad shape" , "Property is in good shape", 
+			Oender Review : "Owner not friendly", "Owner is ignorant" 
+			Provide star rating
+			Custim Reviews
+			Upload Picture
+			Neighborhoor : Good / Bad
+		
+		Architeture : 
+			1) Create Reviews Table with propertyID, PropertyAddress, UserScreenName, stars,pictures, customReviews, ownerReviews(id of predefined 				verbiage),  propertyReviews(id of predefined verbiage)  
+			2) Create buttonValues Table with verbiageID, verbiageText, verbiageFor (Owner,Property).  
+			2) Create a webAPi ->Expose AddReview(review) method which will return review after success.
+			 	
+Story 3 : Search a property
+		A property can be searched if 
+			Reviews are already given
+			If no review available and User is authorized to add review, show Add review Link
+			Show auto populated address (consider USPS addresses) : Validation
+			Show other nearby properties which has good reviews and are on rent
+			State Data : Link of external website where Crime rate, School ratings etc is given.
+		 
+Story 4: Add a reply to review : (Future Item)
+		A reply can be given by owner. Owner can upload pictures of fixtures.
+		A thumbs up/ thumbs down can be given by other users/tanents on a perticular review.	
+
+
+
+Design : Explore Property websites
+	Home Page : 
+		It will have background of nice property
+		It will have Search Box with heading "Search Reviews".
+		It will have Login / Register/ Logged in User Account Links in top right corner
+		It will have Add Review Link which will redirect user to Login/Register page
+	
+	
+	
