@@ -7,7 +7,7 @@ var mongo = require('mongoskin');
 var mongoose = require('mongoose');
 var connString = 'mongodb://listituser:listitpwd@ds015720.mlab.com:15720/listit';
 // var con = 'mongodb://jaspreetnabha:Passw0rd!@movin-shard-00-00-tlpv6.mongodb.net:27017,movin-shard-00-01-tlpv6.mongodb.net:27017,movin-shard-00-02-tlpv6.mongodb.net:27017/test?ssl=true&replicaSet=movin-shard-0&authSource=admin';
-mongoose.connect(con, {useMongoClient: true});
+mongoose.connect(connString, {useMongoClient: true});
 var schema = mongoose.Schema;
 
 var db = mongoose.connection;
