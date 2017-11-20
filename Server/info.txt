@@ -1,0 +1,11 @@
+DB connection
+
+mongodb://jaspreetnabha:<PASSWORD>@movin-shard-00-00-tlpv6.mongodb.net:27017,movin-shard-00-01-tlpv6.mongodb.net:27017,movin-shard-00-02-tlpv6.mongodb.net:27017/test?ssl=true&replicaSet=movin-shard-0&authSource=admin
+
+
+var MongoClient = require('mongodb').MongoClient;
+
+var uri = "mongodb://kay:myRealPassword@mycluster0-shard-00-00-wpeiv.mongodb.net:27017,mycluster0-shard-00-01-wpeiv.mongodb.net:27017,mycluster0-shard-00-02-wpeiv.mongodb.net:27017/admin?ssl=true&replicaSet=Mycluster0-shard-0&authSource=admin";
+MongoClient.connect(uri, function(err, db) {
+  db.close();
+});

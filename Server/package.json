@@ -1,0 +1,33 @@
+{
+  "name": "movin",
+  "version": "1.0.0",
+  "description": "movin server api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaspreetnabha/movin.git"
+  },
+  "keywords": [
+    "review",
+    "houses",
+    "tanent",
+    "owner",
+    "rental",
+    "rent",
+    "home",
+    "movin",
+    "move-in",
+    "move",
+    "in"
+  ],
+  "author": "Jaspreet & Hitesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaspreetnabha/movin/issues"
+  },
+  "homepage": "https://github.com/jaspreetnabha/movin#readme"
+}
